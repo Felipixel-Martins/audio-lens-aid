@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 90% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 90% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 90% 10%;
+
+    --primary: 220 90% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 92%;
+    --secondary-foreground: 220 90% 10%;
+
+    --muted: 210 20% 92%;
+    --muted-foreground: 220 20% 40%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 85%;
+    --input: 220 20% 85%;
+    --ring: 220 90% 25%;
+
+    --radius: 1rem;
+
+    /* Accessibility-focused tokens */
+    --focus-ring: 25 95% 53%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    /* High contrast elements */
+    --high-contrast: 220 90% 10%;
+    --high-contrast-foreground: 0 0% 100%;
+
+    /* Shadows for depth */
+    --shadow-sm: 0 2px 8px hsl(220 90% 10% / 0.08);
+    --shadow-md: 0 4px 16px hsl(220 90% 10% / 0.12);
+    --shadow-lg: 0 8px 32px hsl(220 90% 10% / 0.16);
+    --shadow-accent: 0 8px 32px hsl(25 95% 53% / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 90% 8%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 80% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 80% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 90% 65%;
+    --primary-foreground: 220 90% 10%;
+
+    --secondary: 220 60% 18%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 220 60% 18%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 40% 20%;
+    --input: 220 40% 20%;
+    --ring: 210 90% 65%;
+
+    /* High contrast elements */
+    --high-contrast: 210 20% 98%;
+    --high-contrast-foreground: 220 90% 10%;
+
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.5);
+    --shadow-accent: 0 8px 32px hsl(25 95% 53% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
